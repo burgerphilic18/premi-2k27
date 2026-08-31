@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://premi27.iiit-bh.ac.in/sitemap.xml

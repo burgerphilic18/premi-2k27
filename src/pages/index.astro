@@ -1,0 +1,210 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+
+const topicsList = [
+  "Generative AI",
+  "Agentic AI",
+  "Explainable AI",
+  "Dependable AI",
+  "AI Ethics",
+  "Deep Learning",
+  "Representation Learning",
+  "Reinforcement Learning",
+  "Self-Supervised Learning",
+  "Transfer Learning",
+  "LLM & MLM's",
+  "Natural Language Understanding",
+  "Cognitive Computing",
+  "Computational Intelligence",
+  "Soft Computing",
+  "Statistical Analysis and Learning",
+  "Pattern Recognition",
+  "Biometrics",
+  "Medical Imaging",
+  "Speech and Audio Processing",
+  "Augmented and Virtual Reality",
+  "Data Visualization",
+  "Big Data Analytics",
+  "Spatial Data Analysis",
+  "Social Cognition and Analytics",
+  "Multi-modal Systems",
+  "Cyber Physical Systems",
+  "Edge Intelligence",
+  "Quantum Computing",
+  "Granular Computing",
+  "Natural Computing",
+  "Remote Sensing",
+  "Smart and Intelligent Transportation",
+  "Brain Science",
+  "Computational Neuroscience",
+  "Neurotechnology",
+  "Computational Biology",
+  "Systems Biology",
+  "Digital Health",
+  "Multi-omics and AI"
+];
+---
+
+<BaseLayout>
+  <!-- 2 & 3. 100vh Full-Page Hero Section with Docked Rolling News Banner -->
+  <Hero />
+
+  <!-- Main Container (Crisp #FAFAFA Off-White Background) -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-16 flex-grow w-full">
+    
+    <!-- 4. Core Details & Dates Grid (3-Column Layout) -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+      
+      <!-- Column 1: Objective -->
+      <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-6 sm:p-7 shadow-xs flex flex-col justify-between">
+        <div class="space-y-3">
+          <h2 class="text-lg font-serif font-bold text-[#0F2942] border-b border-[#EFEBC8]/60 pb-2.5 flex items-center gap-2">
+            <span class="w-1.5 h-4 bg-[#0F2942] rounded-xs"></span>
+            <span>Objective</span>
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            The primary goal of the conference is to provide a platform for presenting state-of-the-art scientific results, enabling academic and industrial interactions, and promoting collaborative research activities in Pattern Recognition, Machine Intelligence and related fields, involving scientists, engineers, professionals, academicians, and students.
+          </p>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            This premier biennial event is an ideal forum for people to share their views and experiences in the said areas. This is the twelfth conference of this series.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-[#EFEBC8]/60 text-xs text-slate-500 font-medium">
+          Organizer: <strong class="text-[#0F2942]">IIIT Bhubaneswar, India</strong>
+        </div>
+      </div>
+
+      <!-- Column 2: Important Dates -->
+      <div class="bg-[#FFFDF5] border border-[#EFEBC8] border-t-4 border-t-[#E5C158] rounded-md p-6 sm:p-7 shadow-xs flex flex-col justify-between">
+        <div class="space-y-3">
+          <h2 class="text-lg font-serif font-bold text-[#0F2942] border-b border-[#EFEBC8]/60 pb-2.5 flex items-center gap-2">
+            <span class="w-1.5 h-4 bg-[#E5C158] rounded-xs"></span>
+            <span>Important Dates</span>
+          </h2>
+          <div class="divide-y divide-[#EFEBC8]/60 text-xs sm:text-sm">
+            <div class="py-2.5 flex justify-between items-center gap-2">
+              <span class="text-slate-700">Paper submission open:</span>
+              <span class="font-serif font-bold text-[#0F2942] shrink-0">January 01, 2027</span>
+            </div>
+            <div class="py-2.5 flex justify-between items-center gap-2">
+              <span class="text-slate-700 font-medium">Paper submission close:</span>
+              <span class="font-serif font-bold text-[#0F2942] bg-[#E5C158]/30 px-2 py-0.5 rounded shrink-0">June 30, 2027</span>
+            </div>
+            <div class="py-2.5 flex justify-between items-center gap-2">
+              <span class="text-slate-700">Acceptance notification:</span>
+              <span class="font-serif font-bold text-[#0F2942] shrink-0">September 05, 2027</span>
+            </div>
+            <div class="py-2.5 flex justify-between items-center gap-2">
+              <span class="text-slate-700">Camera-ready submission:</span>
+              <span class="font-serif font-bold text-[#0F2942] shrink-0">September 20, 2027</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-4 border-t border-[#EFEBC8]/60 text-xs text-[#0F2942] font-semibold flex items-center justify-between">
+          <span>Pre-Conf Tutorials:</span>
+          <span>December 15, 2027</span>
+        </div>
+      </div>
+
+      <!-- Column 3: Submission & Publication Details -->
+      <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-6 sm:p-7 shadow-xs flex flex-col justify-between">
+        <div class="space-y-3">
+          <h2 class="text-lg font-serif font-bold text-[#0F2942] border-b border-[#EFEBC8]/60 pb-2.5 flex items-center gap-2">
+            <span class="w-1.5 h-4 bg-[#E5C158] rounded-xs"></span>
+            <span>Submission & Publication</span>
+          </h2>
+          
+          <div class="space-y-2 text-xs sm:text-sm text-slate-700">
+            <p class="leading-relaxed">
+              <strong>Publication:</strong> PREMI'27 Proceedings will be published by Springer Nature under its prestigious <strong>LNCS Series</strong>.
+            </p>
+            <p class="leading-relaxed">
+              <strong>Page Limit:</strong> Papers should have a maximum of <strong>eight A4 pages</strong>.
+            </p>
+            <p class="leading-relaxed">
+              <strong>Pre-Conference Tutorials:</strong> 03 two-hour pre-conference tutorials on December 15, 2027.
+            </p>
+            <p class="leading-relaxed">
+              <strong>Special Sessions:</strong> Proposals for Special Sessions to be directed to Programme Chairs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Download Call for Papers PDF CTA -->
+        <div class="pt-4 border-t border-[#EFEBC8]/60">
+          <a 
+            href="/pdfs/PReMI-2027-CFP15082026.pdf" 
+            target="_blank" 
+            class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#E5C158] hover:bg-[#D4AE44] text-[#0F2942] text-xs font-bold uppercase tracking-wider rounded transition-colors shadow-xs"
+          >
+            <svg class="w-4 h-4 text-[#0F2942]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+            <span>Download Call for Papers PDF</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 5. Topics / Call for Papers (Structured Multi-Column Grid) -->
+    <section id="calls" class="space-y-6">
+      <div class="border-b border-[#EFEBC8] pb-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#0F2942] bg-[#E5C158]/40 px-2 py-0.5 rounded">Call for Papers</span>
+        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#0F2942] mt-2">Topics of Interest</h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+          Papers are invited in all areas of Pattern Recognition and Machine Intelligence including, but not limited to:
+        </p>
+      </div>
+
+      <!-- Topics Tag/Badge Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        {topicsList.map((topic) => (
+          <div class="p-3 bg-[#FFFDF5] border border-[#EFEBC8] rounded text-xs font-medium text-slate-800 hover:border-[#0F2942] hover:bg-[#FAF6E4] transition-all flex items-center gap-2 shadow-2xs">
+            <span class="w-1.5 h-1.5 bg-[#E5C158] rounded-full shrink-0"></span>
+            <span class="leading-tight">{topic}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 6. Venue & Date Cards -->
+    <section id="venue" class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+      
+      <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-6 sm:p-7 shadow-xs flex items-center gap-4">
+        <div class="w-12 h-12 rounded bg-[#0F2942] text-[#E5C158] flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Conference Venue</div>
+          <div class="text-base sm:text-lg font-serif font-bold text-[#0F2942] mt-0.5">
+            IIIT Bhubaneswar
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-6 sm:p-7 shadow-xs flex items-center gap-4">
+        <div class="w-12 h-12 rounded bg-[#E5C158] text-[#0F2942] flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Conference Dates</div>
+          <div class="text-base sm:text-lg font-serif font-bold text-[#0F2942] mt-0.5">
+            December 15–18, 2027
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+</BaseLayout>

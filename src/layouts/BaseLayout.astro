@@ -1,0 +1,180 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+}
+
+const {
+  title = "12th International Conference on Pattern Recognition and Machine Intelligence (PReMI 2027)",
+  description = "Official website of the 12th International Conference on Pattern Recognition and Machine Intelligence (PReMI 2027), organised by IIIT Bhubaneswar, Odisha, India. December 15–18, 2027. Proceedings by Springer LNCS.",
+  image = "/slideshow/iiit-campus.jpg",
+  canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : "https://premi27.iiit-bh.ac.in/"
+} = Astro.props;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AcademicEvent",
+  "name": "12th International Conference on Pattern Recognition and Machine Intelligence (PReMI 2027)",
+  "alternateName": "PReMI 2027",
+  "description": description,
+  "startDate": "2027-12-15",
+  "endDate": "2027-12-18",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "International Institute of Information Technology (IIIT) Bhubaneswar",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bhubaneswar",
+      "addressRegion": "Odisha",
+      "addressCountry": "India"
+    }
+  },
+  "organizer": {
+    "@type": "EducationalOrganization",
+    "name": "International Institute of Information Technology (IIIT) Bhubaneswar",
+    "url": "https://www.iiit-bh.ac.in/"
+  },
+  "sponsor": [
+    {
+      "@type": "Organization",
+      "name": "Springer Nature",
+      "description": "LNCS Series Proceedings Publisher"
+    }
+  ],
+  "keywords": [
+    "Pattern Recognition",
+    "Machine Intelligence",
+    "PReMI 2027",
+    "Artificial Intelligence",
+    "Generative AI",
+    "Agentic AI",
+    "Deep Learning",
+    "IIIT Bhubaneswar",
+    "Springer LNCS",
+    "Computer Science Conference"
+  ],
+  "url": "https://premi27.iiit-bh.ac.in/"
+};
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="PReMI 2027, Pattern Recognition, Machine Intelligence, IIIT Bhubaneswar, Springer LNCS, AI Conference 2027, Machine Learning, Deep Learning, Computer Vision" />
+    <meta name="author" content="IIIT Bhubaneswar" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:site_name" content="PReMI 2027" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Academic Schema.org JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#FCFBE8] text-[#1E293B] antialiased flex flex-col min-h-screen">
+    <Navbar />
+    
+    <slot />
+
+    <Footer />
+
+    <script is:inline>
+      // 1. Slideshow Logic
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('#heroSlideshow .slide-bg');
+      const dots = document.querySelectorAll('.dot-indicator');
+
+      function setSlide(index) {
+        if (slides.length === 0) return;
+        slides[currentSlide].classList.remove('active');
+        if (dots[currentSlide]) {
+          dots[currentSlide].classList.remove('bg-white/90');
+          dots[currentSlide].classList.add('bg-white/40');
+        }
+        currentSlide = (index + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        if (dots[currentSlide]) {
+          dots[currentSlide].classList.add('bg-white/90');
+          dots[currentSlide].classList.remove('bg-white/40');
+        }
+      }
+
+      setInterval(() => {
+        setSlide(currentSlide + 1);
+      }, 5000);
+
+      // 2. Main Mobile Nav Drawer Animation Toggle
+      function toggleMobileNav(forceState) {
+        const container = document.getElementById('mobileNavContainer');
+        const icon = document.getElementById('hamburgerIcon');
+        if (!container) return;
+
+        const willOpen = typeof forceState === 'boolean' ? forceState : !container.classList.contains('open');
+
+        if (willOpen) {
+          container.classList.add('open');
+          if (icon) {
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+          }
+        } else {
+          container.classList.remove('open');
+          if (icon) {
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+          }
+        }
+      }
+
+      // 3. Mobile Accordion Toggle Logic
+      function toggleMobileAccordion(accId, chevronId) {
+        const content = document.getElementById(accId);
+        const chevron = document.getElementById(chevronId);
+        if (!content) return;
+        
+        const isOpen = content.classList.contains('open');
+        
+        document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+        document.querySelectorAll('.chevron-icon').forEach(el => el.classList.remove('rotate-180'));
+
+        if (!isOpen) {
+          content.classList.add('open');
+          if (chevron) chevron.classList.add('rotate-180');
+        }
+      }
+    </script>
+  </body>
+</html>

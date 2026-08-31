@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FCFBE8;
+    color: #1E293B;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', Georgia, serif;
+    color: #0F2942;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Stacking context for sticky navbar */
+.navbar-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  height: 56px;
+  background-color: #FCFBE8;
+  border-bottom: 1px solid #EFEBC8;
+}
+
+.dropdown-menu {
+  z-index: 10000;
+}
+
+/* 100vh Hero Container */
+.hero-fullpage {
+  min-height: calc(100vh - 56px);
+  height: calc(100vh - 56px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Rolling News Marquee Ticker */
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.ticker-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.ticker-content {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker 28s linear infinite;
+}
+
+.ticker-content:hover {
+  animation-play-state: paused;
+}
+
+/* Slideshow Transitions */
+.slide-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1.2s ease-in-out, transform 6s ease-out;
+  opacity: 0;
+  transform: scale(1.02);
+}
+
+.slide-bg.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Mobile Menu Main Drawer */
+.mobile-nav-container {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  background-color: #FCFBE8;
+  border-bottom: 1px solid transparent;
+}
+
+.mobile-nav-container.open {
+  grid-template-rows: 1fr;
+  border-bottom-color: #EFEBC8;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+.mobile-nav-inner {
+  overflow: hidden;
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+/* Nested Mobile Submenu Accordion */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-content.open {
+  grid-template-rows: 1fr;
+}
+
+.accordion-inner {
+  overflow: hidden;
+}
+
+.chevron-icon {
+  transition: transform 250ms ease;
+}
+
+.chevron-icon.rotate-180 {
+  transform: rotate(180deg);
+}
