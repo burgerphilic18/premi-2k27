@@ -114,26 +114,33 @@ const navItems = [
 ---
 
 <nav class="navbar-sticky bg-[#FCFBE8] border-b border-[#EFEBC8] shadow-xs relative w-full">
-  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+  <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 h-14 flex items-center justify-between">
     
-    <!-- Brand Identity (flex-shrink-0) -->
-    <div class="flex-shrink-0 flex items-center mr-2">
-      <a href="#" class="flex items-center gap-2 font-serif font-bold text-[#0F2942] text-sm tracking-tight whitespace-nowrap">
-        <span class="w-7 h-7 bg-[#0C4A60] text-white flex items-center justify-center text-xs font-bold rounded shadow-xs">P</span>
-        <span>PReMI 2027</span>
+    <!-- Clean Brand Identity: Logo + Centered 2-Line Text with minimal right margin -->
+    <div class="flex-shrink-0 flex items-center mr-1">
+      <a href="#" class="flex items-center gap-1.5 group">
+        <img 
+          src="/logo/PReMI_logo_bg.png" 
+          alt="PReMI 2027 Logo" 
+          class="h-9 w-9 sm:h-10 sm:w-10 object-contain shrink-0" 
+        />
+        <div class="flex flex-col items-center text-center leading-none">
+          <span class="font-serif font-bold text-[#0F2942] text-xs sm:text-sm tracking-tight group-hover:text-[#0C4A60]">PReMI</span>
+          <span class="font-sans font-extrabold text-[#0C4A60] text-[10px] sm:text-[11px] tracking-wider mt-0.5">2027</span>
+        </div>
       </a>
     </div>
 
-    <!-- Desktop Navigation Links -->
-    <div class="hidden xl:flex items-center space-x-0.5 overflow-visible justify-end flex-grow">
+    <!-- Desktop Navigation Links: Starts right next to PReMI 2027 with tight padding -->
+    <div class="hidden xl:flex items-center space-x-0.5 overflow-visible justify-start flex-grow pl-2">
       {navItems.map((item) => (
         !item.dropdown ? (
-          <a href={item.href} class="px-2 py-2 text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:text-[#0F2942] hover:bg-[#E5C158]/20 rounded transition-colors whitespace-nowrap">
+          <a href={item.href} class="px-1.5 py-2 text-[10.5px] 2xl:text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:text-[#0F2942] hover:bg-[#E5C158]/20 rounded transition-colors whitespace-nowrap">
             {item.name}
           </a>
         ) : (
           <div class="relative group">
-            <button class="flex items-center gap-0.5 px-2 py-2 text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:text-[#0F2942] hover:bg-[#E5C158]/20 rounded transition-colors whitespace-nowrap focus:outline-none">
+            <button class="flex items-center gap-0.5 px-1.5 py-2 text-[10.5px] 2xl:text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:text-[#0F2942] hover:bg-[#E5C158]/20 rounded transition-colors whitespace-nowrap focus:outline-none">
               <span>{item.name}</span>
               <svg class="w-3 h-3 text-slate-400 group-hover:text-[#0F2942] transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -159,11 +166,16 @@ const navItems = [
       ))}
     </div>
 
-    <!-- Mobile / Tablet Hamburger Button (< 1200px) -->
-    <div class="flex xl:hidden items-center">
-      <button id="hamburgerBtn" onclick="toggleMobileNav()" aria-label="Toggle Menu" class="p-1.5 text-slate-700 hover:bg-[#E5C158]/20 rounded focus:outline-none">
+    <!-- Mobile / Tablet Hamburger Button (Visible on screens < 1280px / xl) -->
+    <div class="flex xl:hidden items-center ml-auto">
+      <button 
+        id="hamburgerBtn" 
+        onclick="toggleMobileNav()" 
+        aria-label="Toggle Menu" 
+        class="p-2 text-[#0F2942] hover:bg-[#E5C158]/30 rounded-md focus:outline-none transition-colors"
+      >
         <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </div>
