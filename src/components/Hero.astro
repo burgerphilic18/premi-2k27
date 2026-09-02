@@ -1,14 +1,15 @@
 ---
 const newsText = "Latest Updates: Paper submission opens on January 01, 2027 | Proceedings will be published in Springer LNCS | Pre-conference tutorials on December 15, 2027.";
+const base = import.meta.env.BASE_URL;
 ---
 
 <div class="hero-fullpage w-full bg-[#0A3246] text-white relative overflow-hidden flex flex-col justify-between">
   
   <!-- Background Slideshow (Pulls local files from /public/slideshow/) -->
   <div id="heroSlideshow" class="absolute inset-0 z-0">
-    <div class="slide-bg active" style="background-image: url('/slideshow/iiit-campus.jpg'), url('http://googleusercontent.com/image_collection/image_retrieval/14253635725454726701_0');"></div>
-    <div class="slide-bg" style="background-image: url('/slideshow/bbsr-1.jpg'), url('http://googleusercontent.com/image_collection/image_retrieval/13346427150569178358_0');"></div>
-    <div class="slide-bg" style="background-image: url('/slideshow/bbsr-2.jpg'), url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1600&q=80');"></div>
+    <div class="slide-bg active" style={`background-image: url('${base}slideshow/iiit-campus.jpg'), url('http://googleusercontent.com/image_collection/image_retrieval/14253635725454726701_0');`}></div>
+    <div class="slide-bg" style={`background-image: url('${base}slideshow/bbsr-1.jpg'), url('http://googleusercontent.com/image_collection/image_retrieval/13346427150569178358_0');`}></div>
+    <div class="slide-bg" style={`background-image: url('${base}slideshow/bbsr-2.jpg'), url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1600&q=80');`}></div>
   </div>
 
   <!-- CSS Deep Teal Color Overlay (rgba(10, 50, 70, 0.75)) -->
@@ -20,7 +21,7 @@ const newsText = "Latest Updates: Paper submission opens on January 01, 2027 | P
     <!-- White with subtle 80% opacity + backdrop blur -->
     <div class="bg-white/80 backdrop-blur-sm border border-white/40 rounded-full p-3 shadow-xl inline-block mx-auto mb-5">
       <img 
-        src="/logo/PReMI_logo_bg.png" 
+        src={`${base}logo/PReMI_logo_bg.png`} 
         alt="PReMI 2027 Conference Emblem" 
         class="h-24 w-24 sm:h-28 sm:w-28 object-contain drop-shadow-sm"
         loading="eager"
@@ -42,7 +43,7 @@ const newsText = "Latest Updates: Paper submission opens on January 01, 2027 | P
       <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#E5C158] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
       </svg>
-      <span>December 15–18, 2027</span>
+      <span>December 15 - 18, 2027</span>
     </div>
 
   </div>

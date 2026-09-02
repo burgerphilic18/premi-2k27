@@ -1,52 +1,52 @@
 ---
 const navItems = [
-  { name: "Home", href: "/" },
+  { name: "Home", href: `${import.meta.env.BASE_URL}` },
   {
     name: "Calls",
-    href: "/#calls",
+    href: `${import.meta.env.BASE_URL}#calls`,
     dropdown: [
-      { name: "Call for Papers", href: "/#calls" },
-      { name: "Workshop Posters", href: "/coming-soon?title=Workshop+Posters" },
-      { name: "Workshops", href: "/coming-soon?title=Call+for+Workshops" },
-      { name: "Tutorials", href: "/coming-soon?title=Call+for+Tutorials" },
-      { name: "Doctoral Colloquium", href: "/coming-soon?title=Doctoral+Colloquium" },
-      { name: "Sponsorship", href: "/coming-soon?title=Call+for+Sponsorship" },
+      { name: "Call for Papers", href: `${import.meta.env.BASE_URL}#calls` },
+      { name: "Workshop Posters", href: `${import.meta.env.BASE_URL}coming-soon?title=Workshop+Posters` },
+      { name: "Workshops", href: `${import.meta.env.BASE_URL}coming-soon?title=Call+for+Workshops` },
+      { name: "Tutorials", href: `${import.meta.env.BASE_URL}coming-soon?title=Call+for+Tutorials` },
+      { name: "Doctoral Colloquium", href: `${import.meta.env.BASE_URL}coming-soon?title=Doctoral+Colloquium` },
+      { name: "Sponsorship", href: `${import.meta.env.BASE_URL}coming-soon?title=Call+for+Sponsorship` },
     ]
   },
   {
     name: "Submission",
-    href: "/coming-soon?title=Submission+Portal",
+    href: `${import.meta.env.BASE_URL}coming-soon?title=Submission+Portal`,
     dropdown: [
-      { name: "Conference Paper", href: "/coming-soon?title=Conference+Paper+Submission" },
-      { name: "Workshop Poster", href: "/coming-soon?title=Workshop+Poster+Submission" },
-      { name: "Tutorial Proposals", href: "/coming-soon?title=Tutorial+Proposals" },
-      { name: "Accepted Papers", href: "/coming-soon?title=Accepted+Papers" },
-      { name: "Workshop Papers", href: "/coming-soon?title=Workshop+Papers" },
+      { name: "Conference Paper", href: `${import.meta.env.BASE_URL}coming-soon?title=Conference+Paper+Submission` },
+      { name: "Workshop Poster", href: `${import.meta.env.BASE_URL}coming-soon?title=Workshop+Poster+Submission` },
+      { name: "Tutorial Proposals", href: `${import.meta.env.BASE_URL}coming-soon?title=Tutorial+Proposals` },
+      { name: "Accepted Papers", href: `${import.meta.env.BASE_URL}coming-soon?title=Accepted+Papers` },
+      { name: "Workshop Papers", href: `${import.meta.env.BASE_URL}coming-soon?title=Workshop+Papers` },
     ]
   },
   {
     name: "Program",
-    href: "/coming-soon?title=Conference+Program",
+    href: `${import.meta.env.BASE_URL}coming-soon?title=Conference+Program`,
     dropdown: [
-      { name: "Workshops", href: "/coming-soon?title=Workshops+Program" },
-      { name: "Tutorials", href: "/coming-soon?title=Tutorials+Program" },
-      { name: "Industry Session", href: "/coming-soon?title=Industry+Session" },
-      { name: "Doctoral Colloquium", href: "/coming-soon?title=Doctoral+Colloquium+Program" },
-      { name: "Cultural Program", href: "/coming-soon?title=Cultural+Program" },
+      { name: "Workshops", href: `${import.meta.env.BASE_URL}coming-soon?title=Workshops+Program` },
+      { name: "Tutorials", href: `${import.meta.env.BASE_URL}coming-soon?title=Tutorials+Program` },
+      { name: "Industry Session", href: `${import.meta.env.BASE_URL}coming-soon?title=Industry+Session` },
+      { name: "Doctoral Colloquium", href: `${import.meta.env.BASE_URL}coming-soon?title=Doctoral+Colloquium+Program` },
+      { name: "Cultural Program", href: `${import.meta.env.BASE_URL}coming-soon?title=Cultural+Program` },
     ]
   },
   {
     name: "Schedule",
-    href: "/coming-soon?title=Conference+Schedule",
+    href: `${import.meta.env.BASE_URL}coming-soon?title=Conference+Schedule`,
     dropdown: [
-      { name: "Conference Schedule", href: "/coming-soon?title=Conference+Schedule" },
-      { name: "Program Brochure", href: "/coming-soon?title=Program+Brochure" },
-      { name: "Oral Presentation", href: "/coming-soon?title=Oral+Presentation+Guidelines" },
-      { name: "Poster Presentation", href: "/coming-soon?title=Poster+Presentation+Guidelines" },
-      { name: "Guidelines", href: "/coming-soon?title=General+Guidelines" },
+      { name: "Conference Schedule", href: `${import.meta.env.BASE_URL}coming-soon?title=Conference+Schedule` },
+      { name: "Program Brochure", href: `${import.meta.env.BASE_URL}coming-soon?title=Program+Brochure` },
+      { name: "Oral Presentation", href: `${import.meta.env.BASE_URL}coming-soon?title=Oral+Presentation+Guidelines` },
+      { name: "Poster Presentation", href: `${import.meta.env.BASE_URL}coming-soon?title=Poster+Presentation+Guidelines` },
+      { name: "Guidelines", href: `${import.meta.env.BASE_URL}coming-soon?title=General+Guidelines` },
     ]
   },
-  { name: "Sponsorship", href: "/coming-soon?title=Sponsorship+Packages" },
+  { name: "Sponsorship", href: `${import.meta.env.BASE_URL}coming-soon?title=Sponsorship+Packages` },
   {
     name: "Past Conferences",
     href: "https://premi25.iitd.ac.in/",
@@ -64,54 +64,55 @@ const navItems = [
   },
   {
     name: "Speakers",
-    href: "/coming-soon?title=Speakers",
+    href: `${import.meta.env.BASE_URL}coming-soon?title=Speakers`,
     dropdown: [
-      { name: "Keynote", href: "/coming-soon?title=Keynote+Speakers" },
-      { name: "Invited", href: "/coming-soon?title=Invited+Speakers" },
-      { name: "Workshop", href: "/coming-soon?title=Workshop+Speakers" },
-      { name: "Industry Session", href: "/coming-soon?title=Industry+Speakers" },
+      { name: "Keynote", href: `${import.meta.env.BASE_URL}coming-soon?title=Keynote+Speakers` },
+      { name: "Invited", href: `${import.meta.env.BASE_URL}coming-soon?title=Invited+Speakers` },
+      { name: "Workshop", href: `${import.meta.env.BASE_URL}coming-soon?title=Workshop+Speakers` },
+      { name: "Industry Session", href: `${import.meta.env.BASE_URL}coming-soon?title=Industry+Speakers` },
     ]
   },
   {
     name: "Committee",
-    href: "/coming-soon?title=Organizing+Committee",
+    href: `${import.meta.env.BASE_URL}coming-soon?title=Organizing+Committee`,
     dropdown: [
-      { name: "Organizing", href: "/coming-soon?title=Organizing+Committee" },
-      { name: "Program", href: "/coming-soon?title=Program+Committee" },
-      { name: "Awards", href: "/coming-soon?title=Awards+Committee" },
-      { name: "Volunteer", href: "/coming-soon?title=Volunteer+Committee" },
-      { name: "Area Chairs", href: "/coming-soon?title=Area+Chairs" },
+      { name: "Organizing", href: `${import.meta.env.BASE_URL}coming-soon?title=Organizing+Committee` },
+      { name: "Program", href: `${import.meta.env.BASE_URL}coming-soon?title=Program+Committee` },
+      { name: "Awards", href: `${import.meta.env.BASE_URL}coming-soon?title=Awards+Committee` },
+      { name: "Volunteer", href: `${import.meta.env.BASE_URL}coming-soon?title=Volunteer+Committee` },
+      { name: "Area Chairs", href: `${import.meta.env.BASE_URL}coming-soon?title=Area+Chairs` },
     ]
   },
   {
     name: "Gallery",
-    href: "/coming-soon?title=Conference+Gallery",
+    href: `${import.meta.env.BASE_URL}coming-soon?title=Conference+Gallery`,
     dropdown: [
-      { name: "Day 0", href: "/coming-soon?title=Gallery+Day+0" },
-      { name: "Day 1", href: "/coming-soon?title=Gallery+Day+1" },
-      { name: "Day 2", href: "/coming-soon?title=Gallery+Day+2" },
-      { name: "Day 3", href: "/coming-soon?title=Gallery+Day+3" },
+      { name: "Day 0", href: `${import.meta.env.BASE_URL}coming-soon?title=Gallery+Day+0` },
+      { name: "Day 1", href: `${import.meta.env.BASE_URL}coming-soon?title=Gallery+Day+1` },
+      { name: "Day 2", href: `${import.meta.env.BASE_URL}coming-soon?title=Gallery+Day+2` },
+      { name: "Day 3", href: `${import.meta.env.BASE_URL}coming-soon?title=Gallery+Day+3` },
     ]
   },
   {
     name: "Updates Info",
-    href: "/coming-soon?title=Updates+%26+Information",
+    href: `${import.meta.env.BASE_URL}coming-soon?title=Updates+%26+Information`,
     dropdown: [
-      { name: "Venue", href: "/#venue" },
-      { name: "Visa", href: "/coming-soon?title=Visa+Information" },
-      { name: "Accommodation", href: "/coming-soon?title=Accommodation" },
-      { name: "Contact Us", href: "/coming-soon?title=Contact+Secretariat" },
+      { name: "Venue", href: `${import.meta.env.BASE_URL}#venue` },
+      { name: "Visa", href: `${import.meta.env.BASE_URL}coming-soon?title=Visa+Information` },
+      { name: "Accommodation", href: `${import.meta.env.BASE_URL}coming-soon?title=Accommodation` },
+      { name: "Contact Us", href: `${import.meta.env.BASE_URL}coming-soon?title=Contact+Secretariat` },
     ]
   },
   {
     name: "Proceedings",
-    href: "/coming-soon?title=Conference+Proceedings",
+    href: `${import.meta.env.BASE_URL}coming-soon?title=Conference+Proceedings`,
     dropdown: [
-      { name: "Volume 1", href: "/coming-soon?title=Proceedings+Volume+1" },
-      { name: "Volume 2", href: "/coming-soon?title=Proceedings+Volume+2" },
+      { name: "Volume 1", href: `${import.meta.env.BASE_URL}coming-soon?title=Proceedings+Volume+1` },
+      { name: "Volume 2", href: `${import.meta.env.BASE_URL}coming-soon?title=Proceedings+Volume+2` },
     ]
   }
 ];
+const base = import.meta.env.BASE_URL;
 ---
 
 <nav class="navbar-sticky bg-[#FCFBE8] border-b border-[#EFEBC8] shadow-xs relative w-full">
@@ -119,9 +120,9 @@ const navItems = [
     
     <!-- Clean Brand Identity: Logo + Centered 2-Line Text -->
     <div class="flex-shrink-0 flex items-center mr-1">
-      <a href="/" class="flex items-center gap-1.5 group">
+      <a href={base} class="flex items-center gap-1.5 group">
         <img 
-          src="/logo/PReMI_logo_bg.png" 
+          src={`${base}logo/PReMI_logo_bg.png`} 
           alt="PReMI 2027 Logo" 
           class="h-9 w-9 sm:h-10 sm:w-10 object-contain shrink-0" 
         />

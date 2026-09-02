@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 
+const base = import.meta.env.BASE_URL;
+
 const topicsList = [
   "Generative AI",
   "Agentic AI",
@@ -134,7 +136,7 @@ const topicsList = [
         <!-- Download Call for Papers PDF CTA -->
         <div class="pt-4 border-t border-[#EFEBC8]/60">
           <a 
-            href="/pdfs/PReMI-2027-CFP15082026.pdf" 
+            href={`${base}pdfs/PReMI-2027-CFP15082026.pdf`} 
             target="_blank" 
             class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#E5C158] hover:bg-[#D4AE44] text-[#0F2942] text-xs font-bold uppercase tracking-wider rounded transition-colors shadow-xs"
           >
@@ -199,7 +201,7 @@ const topicsList = [
         <div>
           <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Conference Dates</div>
           <div class="text-base sm:text-lg font-serif font-bold text-[#0F2942] mt-0.5">
-            December 15–18, 2027
+            December 15 - 18, 2027
           </div>
         </div>
       </div>

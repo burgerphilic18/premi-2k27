@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout 
@@ -42,7 +44,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <!-- Quick Action Buttons -->
       <div class="flex flex-wrap items-center justify-center gap-3 pt-1">
         <a 
-          href="/" 
+          href={base} 
           class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0F2942] hover:bg-[#0C4A60] text-white text-xs font-bold uppercase tracking-wider rounded-md shadow-xs transition-colors"
         >
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,7 +54,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </a>
 
         <a 
-          href="/pdfs/PReMI-2027-CFP15082026.pdf" 
+          href={`${base}pdfs/PReMI-2027-CFP15082026.pdf`} 
           target="_blank"
           class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#E5C158] hover:bg-[#D4AE44] text-[#0F2942] text-xs font-bold uppercase tracking-wider rounded-md shadow-xs transition-colors"
         >

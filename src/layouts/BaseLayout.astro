@@ -10,11 +10,13 @@ interface Props {
   canonicalURL?: string;
 }
 
+const base = import.meta.env.BASE_URL;
+
 const {
   title = "12th International Conference on Pattern Recognition and Machine Intelligence (PReMI 2027)",
-  description = "Official website of the 12th International Conference on Pattern Recognition and Machine Intelligence (PReMI 2027), organised by IIIT Bhubaneswar, Odisha, India. December 15–18, 2027. Proceedings by Springer LNCS.",
-  image = "/slideshow/iiit-campus.jpg",
-  canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : "https://premi27.iiit-bh.ac.in/"
+  description = "Official website of the 12th International Conference on Pattern Recognition and Machine Intelligence (PReMI 2027), organised by IIIT Bhubaneswar, Odisha, India. December 15 - 18, 2027. Proceedings by Springer LNCS.",
+  image = `${base}slideshow/iiit-campus.jpg`,
+  canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : "https://burgerphilic18.github.io/premi-2k27/"
 } = Astro.props;
 
 const structuredData = {
@@ -61,11 +63,11 @@ const structuredData = {
     "Springer LNCS",
     "Computer Science Conference"
   ],
-  "url": "https://premi27.iiit-bh.ac.in/"
+  "url": canonicalURL
 };
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
     <!-- Basic Meta -->
@@ -97,9 +99,8 @@ const structuredData = {
     <!-- Academic Schema.org JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
-    <!-- Favicon & Icons -->
-    <link rel="icon" type="image/png" href="/logo/PReMI_logo_bg.png" />
-    <link rel="apple-touch-icon" href="/logo/PReMI_logo_bg.png" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href={`${base}logo/PReMI_logo_bg.png`} />
 
     <!-- Preconnect & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -134,9 +135,11 @@ const structuredData = {
         }
       }
 
-      setInterval(() => {
-        setSlide(currentSlide + 1);
-      }, 5000);
+      if (slides.length > 0) {
+        setInterval(() => {
+          setSlide(currentSlide + 1);
+        }, 5000);
+      }
 
       // 2. Main Mobile Nav Drawer Animation Toggle
       function toggleMobileNav(forceState) {
