@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Coming Soon | PReMI 2027" 
+  description="Details for this section of the 12th International Conference on Pattern Recognition and Machine Intelligence (PReMI 2027) will be announced soon."
+>
+  <main class="h-[calc(100vh-56px)] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div class="max-w-2xl w-full text-center space-y-6">
+
+      <!-- Dynamic / Contextual Title & Description -->
+      <div class="space-y-2">
+        <h1 id="comingSoonTitle" class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0F2942] tracking-tight">
+          Coming Soon
+        </h1>
+        <p id="comingSoonDesc" class="text-sm sm:text-base text-slate-700 max-w-lg mx-auto leading-relaxed">
+          The official details, guidelines, and schedules for this section will be published here.
+        </p>
+      </div>
+
+      <!-- Timeline & Conference Highlights Card -->
+      <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-lg p-5 sm:p-6 shadow-xs text-left divide-y divide-[#EFEBC8]/60 space-y-3">
+        <div class="flex items-center justify-between pb-2.5">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Conference Dates</span>
+          <span class="text-xs sm:text-sm font-serif font-bold text-[#0F2942]">December 15 - 18, 2027</span>
+        </div>
+        <div class="flex items-center justify-between pt-2.5">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Paper Submission Opens</span>
+          <span class="text-xs sm:text-sm font-serif font-bold text-[#0C4A60]">January 01, 2027</span>
+        </div>
+        <div class="flex items-center justify-between pt-2.5">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Proceedings Publisher</span>
+          <span class="text-xs sm:text-sm font-semibold text-slate-800">Springer Nature (LNCS)</span>
+        </div>
+        <div class="flex items-center justify-between pt-2.5">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Host Institution</span>
+          <span class="text-xs sm:text-sm font-semibold text-slate-800">IIIT Bhubaneswar, Odisha, India</span>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-1">
+        <a 
+          href="/" 
+          class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0F2942] hover:bg-[#0C4A60] text-white text-xs font-bold uppercase tracking-wider rounded-md shadow-xs transition-colors"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          <span>Back to Landing Page</span>
+        </a>
+
+        <a 
+          href="/pdfs/PReMI-2027-CFP15082026.pdf" 
+          target="_blank"
+          class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#E5C158] hover:bg-[#D4AE44] text-[#0F2942] text-xs font-bold uppercase tracking-wider rounded-md shadow-xs transition-colors"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span>Download Call for Papers</span>
+        </a>
+      </div>
+
+      <!-- Contact Us -->
+      <p class="text-xs text-slate-500 pt-1">
+        Contact us at 
+        <a href="mailto:premi2027@iiit-bh.ac.in" class="font-semibold text-[#0C4A60] hover:underline">premi2027@iiit-bh.ac.in</a>
+      </p>
+
+    </div>
+  </main>
+
+  <script is:inline>
+    const urlParams = new URLSearchParams(window.location.search);
+    const titleParam = urlParams.get('title') || urlParams.get('page');
+    if (titleParam) {
+      const titleEl = document.getElementById('comingSoonTitle');
+      const descEl = document.getElementById('comingSoonDesc');
+      if (titleEl) {
+        titleEl.textContent = `${titleParam}: Coming Soon`;
+      }
+      if (descEl) {
+        descEl.textContent = `Official guidelines, submission details, and announcements for ${titleParam} will be published here.`;
+      }
+    }
+  </script>
+</BaseLayout>

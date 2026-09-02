@@ -1,55 +1,56 @@
 ---
 const navItems = [
-  { name: "Home", href: "#" },
+  { name: "Home", href: "/" },
   {
     name: "Calls",
-    href: "#calls",
+    href: "/#calls",
     dropdown: [
-      { name: "Workshop Posters", href: "#calls" },
-      { name: "Papers", href: "#calls" },
-      { name: "Workshops", href: "#calls" },
-      { name: "Tutorials", href: "#calls" },
-      { name: "Doctoral Colloquium", href: "#calls" },
-      { name: "Sponsorship", href: "#sponsorship" },
+      { name: "Call for Papers", href: "/#calls" },
+      { name: "Workshop Posters", href: "/coming-soon?title=Workshop+Posters" },
+      { name: "Workshops", href: "/coming-soon?title=Call+for+Workshops" },
+      { name: "Tutorials", href: "/coming-soon?title=Call+for+Tutorials" },
+      { name: "Doctoral Colloquium", href: "/coming-soon?title=Doctoral+Colloquium" },
+      { name: "Sponsorship", href: "/coming-soon?title=Call+for+Sponsorship" },
     ]
   },
   {
     name: "Submission",
-    href: "#submission",
+    href: "/coming-soon?title=Submission+Portal",
     dropdown: [
-      { name: "Workshop Poster", href: "#submission" },
-      { name: "Conference Paper", href: "#submission" },
-      { name: "Tutorial", href: "#submission" },
-      { name: "Accepted Papers", href: "#submission" },
-      { name: "Workshop Papers", href: "#submission" },
+      { name: "Conference Paper", href: "/coming-soon?title=Conference+Paper+Submission" },
+      { name: "Workshop Poster", href: "/coming-soon?title=Workshop+Poster+Submission" },
+      { name: "Tutorial Proposals", href: "/coming-soon?title=Tutorial+Proposals" },
+      { name: "Accepted Papers", href: "/coming-soon?title=Accepted+Papers" },
+      { name: "Workshop Papers", href: "/coming-soon?title=Workshop+Papers" },
     ]
   },
   {
     name: "Program",
-    href: "#program",
+    href: "/coming-soon?title=Conference+Program",
     dropdown: [
-      { name: "Workshops", href: "#program" },
-      { name: "Tutorials", href: "#program" },
-      { name: "Industry Session", href: "#program" },
-      { name: "Doctoral Colloquium", href: "#program" },
-      { name: "Cultural Program", href: "#program" },
+      { name: "Workshops", href: "/coming-soon?title=Workshops+Program" },
+      { name: "Tutorials", href: "/coming-soon?title=Tutorials+Program" },
+      { name: "Industry Session", href: "/coming-soon?title=Industry+Session" },
+      { name: "Doctoral Colloquium", href: "/coming-soon?title=Doctoral+Colloquium+Program" },
+      { name: "Cultural Program", href: "/coming-soon?title=Cultural+Program" },
     ]
   },
   {
     name: "Schedule",
-    href: "#schedule",
+    href: "/coming-soon?title=Conference+Schedule",
     dropdown: [
-      { name: "Conference Schedule", href: "#schedule" },
-      { name: "Program Brochure", href: "#schedule" },
-      { name: "Oral Presentation", href: "#schedule" },
-      { name: "Poster Presentation", href: "#schedule" },
-      { name: "Guidelines", href: "#schedule" },
+      { name: "Conference Schedule", href: "/coming-soon?title=Conference+Schedule" },
+      { name: "Program Brochure", href: "/coming-soon?title=Program+Brochure" },
+      { name: "Oral Presentation", href: "/coming-soon?title=Oral+Presentation+Guidelines" },
+      { name: "Poster Presentation", href: "/coming-soon?title=Poster+Presentation+Guidelines" },
+      { name: "Guidelines", href: "/coming-soon?title=General+Guidelines" },
     ]
   },
-  { name: "Sponsorship", href: "#sponsorship" },
+  { name: "Sponsorship", href: "/coming-soon?title=Sponsorship+Packages" },
   {
     name: "Past Conferences",
-    href: "#",
+    href: "https://premi25.iitd.ac.in/",
+    target: "_blank",
     dropdown: [
       { name: "PREMI 2025", href: "https://premi25.iitd.ac.in/", target: "_blank" },
       { name: "PREMI 2023", href: "https://www.isical.ac.in/~premi23/", target: "_blank" },
@@ -63,51 +64,51 @@ const navItems = [
   },
   {
     name: "Speakers",
-    href: "#speakers",
+    href: "/coming-soon?title=Speakers",
     dropdown: [
-      { name: "Keynote", href: "#speakers" },
-      { name: "Invited", href: "#speakers" },
-      { name: "Workshop", href: "#speakers" },
-      { name: "Industry Session", href: "#speakers" },
+      { name: "Keynote", href: "/coming-soon?title=Keynote+Speakers" },
+      { name: "Invited", href: "/coming-soon?title=Invited+Speakers" },
+      { name: "Workshop", href: "/coming-soon?title=Workshop+Speakers" },
+      { name: "Industry Session", href: "/coming-soon?title=Industry+Speakers" },
     ]
   },
   {
     name: "Committee",
-    href: "#committee",
+    href: "/coming-soon?title=Organizing+Committee",
     dropdown: [
-      { name: "Organizing", href: "#committee" },
-      { name: "Program", href: "#committee" },
-      { name: "Awards", href: "#committee" },
-      { name: "Volunteer", href: "#committee" },
-      { name: "Area Chairs", href: "#committee" },
+      { name: "Organizing", href: "/coming-soon?title=Organizing+Committee" },
+      { name: "Program", href: "/coming-soon?title=Program+Committee" },
+      { name: "Awards", href: "/coming-soon?title=Awards+Committee" },
+      { name: "Volunteer", href: "/coming-soon?title=Volunteer+Committee" },
+      { name: "Area Chairs", href: "/coming-soon?title=Area+Chairs" },
     ]
   },
   {
     name: "Gallery",
-    href: "#gallery",
+    href: "/coming-soon?title=Conference+Gallery",
     dropdown: [
-      { name: "Day 0", href: "#gallery" },
-      { name: "Day 1", href: "#gallery" },
-      { name: "Day 2", href: "#gallery" },
-      { name: "Day 3", href: "#gallery" },
+      { name: "Day 0", href: "/coming-soon?title=Gallery+Day+0" },
+      { name: "Day 1", href: "/coming-soon?title=Gallery+Day+1" },
+      { name: "Day 2", href: "/coming-soon?title=Gallery+Day+2" },
+      { name: "Day 3", href: "/coming-soon?title=Gallery+Day+3" },
     ]
   },
   {
     name: "Updates Info",
-    href: "#info",
+    href: "/coming-soon?title=Updates+%26+Information",
     dropdown: [
-      { name: "Venue", href: "#venue" },
-      { name: "Visa", href: "#info" },
-      { name: "Accommodation", href: "#info" },
-      { name: "Contact Us", href: "#contact" },
+      { name: "Venue", href: "/#venue" },
+      { name: "Visa", href: "/coming-soon?title=Visa+Information" },
+      { name: "Accommodation", href: "/coming-soon?title=Accommodation" },
+      { name: "Contact Us", href: "/coming-soon?title=Contact+Secretariat" },
     ]
   },
   {
     name: "Proceedings",
-    href: "#proceedings",
+    href: "/coming-soon?title=Conference+Proceedings",
     dropdown: [
-      { name: "Volume 1", href: "#proceedings" },
-      { name: "Volume 2", href: "#proceedings" },
+      { name: "Volume 1", href: "/coming-soon?title=Proceedings+Volume+1" },
+      { name: "Volume 2", href: "/coming-soon?title=Proceedings+Volume+2" },
     ]
   }
 ];
@@ -116,9 +117,9 @@ const navItems = [
 <nav class="navbar-sticky bg-[#FCFBE8] border-b border-[#EFEBC8] shadow-xs relative w-full">
   <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 h-14 flex items-center justify-between">
     
-    <!-- Clean Brand Identity: Logo + Centered 2-Line Text with minimal right margin -->
+    <!-- Clean Brand Identity: Logo + Centered 2-Line Text -->
     <div class="flex-shrink-0 flex items-center mr-1">
-      <a href="#" class="flex items-center gap-1.5 group">
+      <a href="/" class="flex items-center gap-1.5 group">
         <img 
           src="/logo/PReMI_logo_bg.png" 
           alt="PReMI 2027 Logo" 
@@ -131,21 +132,31 @@ const navItems = [
       </a>
     </div>
 
-    <!-- Desktop Navigation Links: Starts right next to PReMI 2027 with tight padding -->
+    <!-- Desktop Navigation Links -->
     <div class="hidden xl:flex items-center space-x-0.5 overflow-visible justify-start flex-grow pl-2">
       {navItems.map((item) => (
         !item.dropdown ? (
-          <a href={item.href} class="px-1.5 py-2 text-[10.5px] 2xl:text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:text-[#0F2942] hover:bg-[#E5C158]/20 rounded transition-colors whitespace-nowrap">
+          <a 
+            href={item.href} 
+            target={item.target || undefined}
+            rel={item.target ? "noopener noreferrer" : undefined}
+            class="px-1.5 py-2 text-[10.5px] 2xl:text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:text-[#0F2942] hover:bg-[#E5C158]/20 rounded transition-colors whitespace-nowrap"
+          >
             {item.name}
           </a>
         ) : (
           <div class="relative group">
-            <button class="flex items-center gap-0.5 px-1.5 py-2 text-[10.5px] 2xl:text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:text-[#0F2942] hover:bg-[#E5C158]/20 rounded transition-colors whitespace-nowrap focus:outline-none">
+            <a 
+              href={item.href}
+              target={item.target || undefined}
+              rel={item.target ? "noopener noreferrer" : undefined}
+              class="flex items-center gap-0.5 px-1.5 py-2 text-[10.5px] 2xl:text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:text-[#0F2942] hover:bg-[#E5C158]/20 rounded transition-colors whitespace-nowrap focus:outline-none"
+            >
               <span>{item.name}</span>
               <svg class="w-3 h-3 text-slate-400 group-hover:text-[#0F2942] transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
-            </button>
+            </a>
             <div class="dropdown-menu hidden group-hover:block absolute left-0 mt-0 min-w-[185px] bg-white border border-slate-200 shadow-2xl py-1 rounded-b">
               <div class="px-3 py-1.5 border-b border-slate-100 bg-[#E5C158]/15 text-[10px] font-bold uppercase tracking-wider text-[#0F2942]">
                 {item.name}
@@ -166,7 +177,7 @@ const navItems = [
       ))}
     </div>
 
-    <!-- Mobile / Tablet Hamburger Button (Visible on screens < 1280px / xl) -->
+    <!-- Mobile / Tablet Hamburger Button (< 1280px / xl) -->
     <div class="flex xl:hidden items-center ml-auto">
       <button 
         id="hamburgerBtn" 
@@ -188,7 +199,13 @@ const navItems = [
       {navItems.map((item, idx) => (
         !item.dropdown ? (
           <div class="py-2">
-            <a href={item.href} onclick="toggleMobileNav(false)" class="block text-xs font-semibold uppercase tracking-wider text-[#0F2942] hover:text-[#0C4A60]">
+            <a 
+              href={item.href} 
+              target={item.target || undefined}
+              rel={item.target ? "noopener noreferrer" : undefined}
+              onclick="toggleMobileNav(false)" 
+              class="block text-xs font-semibold uppercase tracking-wider text-[#0F2942] hover:text-[#0C4A60]"
+            >
               {item.name}
             </a>
           </div>
