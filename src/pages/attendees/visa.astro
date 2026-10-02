@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+
+const eligibilityCriteria = [
+  "Whose sole objective of visiting India is to attend a conference/seminar or workshop being held in India;",
+  "Who holds a valid passport, and a re-entry permit if that is required under the law of the country of nationality of the applicant;",
+  "Who is not a persona-non-grata to the Government of India;",
+  "Who is not considered an undesirable person and is not the subject of a negative list or any warning circular or other restrictive list; and",
+  "Who is a person of assured financial standing (the production of a return ticket and availability of sufficient money to spend during his stay in India may be considered sufficient for this purpose)."
+];
+---
+
+<BaseLayout 
+  title="VISA Guidelines | PReMI 2027" 
+  description="Official Ministry of Home Affairs (MHA) Conference Visa guidelines and eligibility criteria for international participants attending PReMI 2027."
+>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow w-full space-y-10">
+    
+    <!-- Breadcrumb & Header -->
+    <div class="space-y-3">
+      <nav class="flex items-center gap-2 text-xs text-slate-500 font-medium">
+        <a href={base} class="hover:text-[#0F2942] transition-colors">Home</a>
+        <span>/</span>
+        <a href={`${base}attendees`} class="hover:text-[#0F2942] transition-colors">Attendees</a>
+        <span>/</span>
+        <span class="text-[#0F2942] font-semibold">VISA</span>
+      </nav>
+
+      <div class="border-b border-[#EFEBC8] pb-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#0F2942] bg-[#E5C158]/40 px-2.5 py-0.5 rounded">
+          International Travel
+        </span>
+        <h1 class="text-3xl sm:text-4xl font-serif font-bold text-[#0F2942] mt-2">
+          Conference Visa Information
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-600 mt-2 max-w-3xl leading-relaxed">
+          Official Government of India Ministry of Home Affairs (MHA) visa instructions for international delegates attending PReMI 2027.
+        </p>
+      </div>
+    </div>
+
+    <!-- Main Visa Explanation -->
+    <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-6 sm:p-8 shadow-xs space-y-6">
+      
+      <div class="space-y-3">
+        <h2 class="text-lg font-serif font-bold text-[#0F2942] border-b border-[#EFEBC8]/60 pb-2">
+          Conference Visa Requirement
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          If you’re visiting India to attend the conference, you need to obtain a <strong>Conference Visa</strong> instead of a Tourist Visa. A Conference visa is usually valid for 6 months from the time of issue and also permits tourism.
+        </p>
+      </div>
+
+      <div class="space-y-4 pt-2">
+        <h3 class="text-base font-serif font-bold text-[#0F2942]">
+          Ministry of Home Affairs (MHA) Eligibility Criteria
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          The Ministry of Home Affairs (MHA) specifies the eligibility criteria for a Conference visa as follows: A Conference visa is granted to a foreigner:
+        </p>
+        
+        <ul class="space-y-2.5 pl-2">
+          {eligibilityCriteria.map((criterion) => (
+            <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed">
+              <span class="w-1.5 h-1.5 bg-[#E5C158] rounded-full mt-2 shrink-0"></span>
+              <span>{criterion}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Official Links Callout -->
+      <div class="pt-4 border-t border-[#EFEBC8]/60 space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-[#0F2942]">
+          Official Government Portals & Resources
+        </h4>
+        <div class="flex flex-wrap gap-4 text-xs">
+          <a 
+            href="https://indianvisaonline.gov.in/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-[#0F2942] hover:bg-[#0C4A60] text-white font-bold rounded transition-colors shadow-xs"
+          >
+            <span>Indian Visa Online Portal</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+        <p class="text-xs text-slate-600 pt-1">
+          For questions related to combining tourism with a conference visit on the conference visa and related queries, please consult the official portal instructions and guidelines.
+        </p>
+      </div>
+
+    </div>
+
+  </main>
+</BaseLayout>

@@ -1,61 +1,62 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
+import JointOrganisers from '../components/JointOrganisers.astro';
 
 const base = import.meta.env.BASE_URL;
 
 const topicsList = [
-  "Generative AI",
+  "Augmented and Virtual Reality",
   "Agentic AI",
-  "Explainable AI",
-  "Dependable AI",
   "AI Ethics",
+  "Big Data Analytics",
+  "Biometrics",
+  "Brain Science",
+  "Cognitive Computing",
+  "Computational Intelligence",
+  "Computational Biology",
+  "Computational Neuroscience",
+  "Cyber Physical Systems",
+  "Data Visualization",
+  "Dependable AI",
   "Deep Learning",
-  "Representation Learning",
+  "Digital Health",
+  "Edge Intelligence",
+  "Explainable AI",
+  "Generative AI",
+  "Granular Computing",
+  "Natural Computing",
+  "Natural Language Understanding",
+  "Neurotechnology",
+  "Pattern Recognition",
+  "Quantum Computing",
   "Reinforcement Learning",
+  "Remote Sensing",
+  "Representation Learning",
+  "Smart and Intelligent Transportation",
+  "Social Cognition and Analytics",
+  "Soft Computing",
+  "Spatial Data Analysis",
+  "Speech and Audio Processing",
+  "Statistical Analysis and Learning",
+  "Systems Biology",
   "Self-Supervised Learning",
   "Transfer Learning",
   "LLM & MLM's",
-  "Natural Language Understanding",
-  "Cognitive Computing",
-  "Computational Intelligence",
-  "Soft Computing",
-  "Statistical Analysis and Learning",
-  "Pattern Recognition",
-  "Biometrics",
   "Medical Imaging",
-  "Speech and Audio Processing",
-  "Augmented and Virtual Reality",
-  "Data Visualization",
-  "Big Data Analytics",
-  "Spatial Data Analysis",
-  "Social Cognition and Analytics",
   "Multi-modal Systems",
-  "Cyber Physical Systems",
-  "Edge Intelligence",
-  "Quantum Computing",
-  "Granular Computing",
-  "Natural Computing",
-  "Remote Sensing",
-  "Smart and Intelligent Transportation",
-  "Brain Science",
-  "Computational Neuroscience",
-  "Neurotechnology",
-  "Computational Biology",
-  "Systems Biology",
-  "Digital Health",
   "Multi-omics and AI"
 ];
 ---
 
 <BaseLayout>
-  <!-- 2 & 3. 100vh Full-Page Hero Section with Docked Rolling News Banner -->
+  <!-- Full-Page Hero Section with Docked Rolling News Banner -->
   <Hero />
 
-  <!-- Main Container (Crisp #FAFAFA Off-White Background) -->
+  <!-- Main Container -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-16 flex-grow w-full">
     
-    <!-- 4. Core Details & Dates Grid (3-Column Layout) -->
+    <!-- Core Details & Dates Grid (3-Column Layout) -->
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
       
       <!-- Column 1: Objective -->
@@ -73,7 +74,7 @@ const topicsList = [
           </p>
         </div>
         <div class="pt-4 border-t border-[#EFEBC8]/60 text-xs text-slate-500 font-medium">
-          Organizer: <strong class="text-[#0F2942]">IIIT Bhubaneswar, India</strong>
+          Organizer: <strong class="text-[#0F2942]">IIIT Bhubaneswar, Odisha, India</strong>
         </div>
       </div>
 
@@ -91,21 +92,21 @@ const topicsList = [
             </div>
             <div class="py-2.5 flex justify-between items-center gap-2">
               <span class="text-slate-700 font-medium">Paper submission close:</span>
-              <span class="font-serif font-bold text-[#0F2942] bg-[#E5C158]/30 px-2 py-0.5 rounded shrink-0">June 30, 2027</span>
+              <span class="font-serif font-bold text-[#0F2942] bg-[#E5C158]/30 px-2 py-0.5 rounded shrink-0">May 31, 2027</span>
             </div>
             <div class="py-2.5 flex justify-between items-center gap-2">
               <span class="text-slate-700">Acceptance notification:</span>
-              <span class="font-serif font-bold text-[#0F2942] shrink-0">September 05, 2027</span>
+              <span class="font-serif font-bold text-[#0F2942] shrink-0">September 01, 2027</span>
             </div>
             <div class="py-2.5 flex justify-between items-center gap-2">
               <span class="text-slate-700">Camera-ready submission:</span>
-              <span class="font-serif font-bold text-[#0F2942] shrink-0">September 20, 2027</span>
+              <span class="font-serif font-bold text-[#0F2942] shrink-0">September 16, 2027</span>
             </div>
           </div>
         </div>
         <div class="pt-4 border-t border-[#EFEBC8]/60 text-xs text-[#0F2942] font-semibold flex items-center justify-between">
           <span>Pre-Conf Tutorials:</span>
-          <span>December 15, 2027</span>
+          <span>December 14, 2027</span>
         </div>
       </div>
 
@@ -114,26 +115,26 @@ const topicsList = [
         <div class="space-y-3">
           <h2 class="text-lg font-serif font-bold text-[#0F2942] border-b border-[#EFEBC8]/60 pb-2.5 flex items-center gap-2">
             <span class="w-1.5 h-4 bg-[#E5C158] rounded-xs"></span>
-            <span>Submission & Publication</span>
+            <span>Publication & Tutorials</span>
           </h2>
           
           <div class="space-y-2 text-xs sm:text-sm text-slate-700">
             <p class="leading-relaxed">
-              <strong>Publication:</strong> PREMI'27 Proceedings will be published by Springer Nature under its prestigious <strong>LNCS Series</strong>.
+              <strong>Publication:</strong> PReMI'27 Proceedings will be published by Springer Nature under its prestigious <strong>LNCS Series</strong>.
             </p>
             <p class="leading-relaxed">
               <strong>Page Limit:</strong> Papers should have a maximum of <strong>eight A4 pages</strong>.
             </p>
             <p class="leading-relaxed">
-              <strong>Pre-Conference Tutorials:</strong> 03 two-hour pre-conference tutorials on December 15, 2027.
+              <strong>Tutorials:</strong> There will be 03 two-hour pre-conference tutorials on <strong>December 14, 2027</strong>.
             </p>
             <p class="leading-relaxed">
-              <strong>Special Sessions:</strong> Proposals for Special Sessions to be directed to Programme Chairs.
+              <strong>Special Sessions:</strong> Proposals for Special Sessions are to be directed to the Programme Chairs.
             </p>
           </div>
         </div>
 
-        <!-- Download Call for Papers PDF CTA -->
+        <!-- Call for Papers Action Link -->
         <div class="pt-4 border-t border-[#EFEBC8]/60">
           <a 
             href={`${base}pdfs/PReMI-2027-CFP15082026.pdf`} 
@@ -153,13 +154,13 @@ const topicsList = [
 
     </section>
 
-    <!-- 5. Topics / Call for Papers (Structured Multi-Column Grid) -->
+    <!-- Topics / Call for Papers (Structured Grid) -->
     <section id="calls" class="space-y-6">
       <div class="border-b border-[#EFEBC8] pb-3">
         <span class="text-xs font-bold uppercase tracking-wider text-[#0F2942] bg-[#E5C158]/40 px-2 py-0.5 rounded">Call for Papers</span>
         <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#0F2942] mt-2">Topics of Interest</h2>
         <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-          Papers are invited in all areas of Pattern Recognition and Machine Intelligence including, but not limited to:
+          Papers are invited in all areas of Pattern Recognition and Machine Intelligence including, but not limited to, the following:
         </p>
       </div>
 
@@ -174,35 +175,91 @@ const topicsList = [
       </div>
     </section>
 
-    <!-- 6. Venue & Date Cards -->
-    <section id="venue" class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-      
-      <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-6 sm:p-7 shadow-xs flex items-center gap-4">
-        <div class="w-12 h-12 rounded bg-[#0F2942] text-[#E5C158] flex items-center justify-center shrink-0">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-        </div>
-        <div>
-          <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Conference Venue</div>
-          <div class="text-base sm:text-lg font-serif font-bold text-[#0F2942] mt-0.5">
-            IIIT Bhubaneswar
-          </div>
-        </div>
+    <!-- Jointly Organized By Section -->
+    <JointOrganisers />
+
+    <!-- Status Notice from Google Site -->
+    <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-4 text-center">
+      <p class="text-xs sm:text-sm font-medium text-slate-600 italic">
+        Other Details are Coming Soon..!
+      </p>
+    </div>
+
+    <!-- Venue: The City and The Institute -->
+    <section id="venue" class="space-y-6 pt-2">
+      <div class="border-b border-[#EFEBC8] pb-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#0F2942] bg-[#E5C158]/40 px-2 py-0.5 rounded">Location & Host</span>
+        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#0F2942] mt-2">Venue: The City and The Institute</h2>
       </div>
 
-      <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-6 sm:p-7 shadow-xs flex items-center gap-4">
-        <div class="w-12 h-12 rounded bg-[#E5C158] text-[#0F2942] flex items-center justify-center shrink-0">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-        </div>
-        <div>
-          <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Conference Dates</div>
-          <div class="text-base sm:text-lg font-serif font-bold text-[#0F2942] mt-0.5">
-            December 15 - 18, 2027
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        
+        <!-- The City: Bhubaneswar -->
+        <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-6 sm:p-7 shadow-xs space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded bg-[#0F2942] text-[#E5C158] flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <div>
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Host City</span>
+              <h3 class="text-lg font-serif font-bold text-[#0F2942]">The City: Bhubaneswar</h3>
+            </div>
           </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed text-justify">
+            Bhubaneswar, the capital city of Odisha, is a vibrant centre of education, technology, innovation, and cultural heritage, offering an ideal setting for PReMI 2027. Known as the “Temple City of India,” the city combines its rich historical legacy with a rapidly growing technology and startup ecosystem. Home to premier institutions, research organizations, and technology-driven enterprises, Bhubaneswar provides a conducive environment for research and collaboration in Pattern Recognition, Machine Intelligence, Artificial Intelligence, Computer Vision, Data Science, and emerging computational technologies. Its growing IT ecosystem, excellent connectivity, modern infrastructure, and diverse academic community make it an attractive destination for researchers and practitioners from around the world. With a unique blend of academic excellence, technological innovation, cultural richness, and a dynamic research environment, Bhubaneswar provides an inspiring and accessible venue for PReMI 2027.
+          </p>
+        </div>
+
+        <!-- The Institute: IIIT Bhubaneswar -->
+        <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-6 sm:p-7 shadow-xs space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded bg-[#E5C158] text-[#0F2942] flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+              </svg>
+            </div>
+            <div>
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Host Institute</span>
+              <h3 class="text-lg font-serif font-bold text-[#0F2942]">The Institute: IIIT Bhubaneswar</h3>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed text-justify">
+            The International Institute of Information Technology Bhubaneswar (IIIT Bhubaneswar) is a premier institute dedicated to excellence in education, research, and innovation in information technology and allied disciplines. Established in 2006, the Institute offers undergraduate, postgraduate, and doctoral programmes. It has developed strong research expertise in Artificial Intelligence, Machine Learning, Computer Vision, Pattern Recognition, Image Processing, Remote Sensing, Data Science, and related emerging technologies. With modern infrastructure, advanced laboratories, a vibrant research environment, and strong industry-academia collaborations, IIIT Bhubaneswar provides an ideal setting for fostering interdisciplinary research and knowledge exchange.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Address, Contact & Google Maps Link -->
+      <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-6 sm:p-7 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div class="space-y-1 text-xs sm:text-sm text-slate-700">
+          <h4 class="font-serif font-bold text-base text-[#0F2942]">
+            International Institute of Information Technology (IIIT-Bh)
+          </h4>
+          <p class="text-slate-600">
+            Bhubaneswar, Gothapatna, Po: Malipada, Bhubaneswar - 751003, Odisha, India
+          </p>
+          <p class="text-slate-600">
+            Email: <a href="mailto:premi2027@iiit-bh.ac.in" class="font-semibold text-[#0C4A60] hover:underline">premi2027@iiit-bh.ac.in</a>
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <a 
+            href="https://www.google.com/maps/place/IIIT+Bhubaneswar/@20.2947474,85.7433963,617m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3a1907923fc9c557:0xd3b0b05336a9dfaa!8m2!3d20.2947474!4d85.7433963!16s%2Fm%2F05f711n" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2.5 bg-[#0F2942] hover:bg-[#0C4A60] text-white text-xs font-bold uppercase tracking-wider rounded transition-colors shadow-xs"
+          >
+            <svg class="w-4 h-4 text-[#E5C158]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span>View on Google Maps</span>
+          </a>
         </div>
       </div>
 
@@ -210,3 +267,4 @@ const topicsList = [
 
   </main>
 </BaseLayout>
+

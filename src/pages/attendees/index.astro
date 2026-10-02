@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout 
+  title="Attendees | PReMI 2027" 
+  description="Attendee information, registration notices, and logistics for the 12th International Conference on Pattern Recognition and Machine Intelligence (PReMI 2027)."
+>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow w-full space-y-10">
+    
+    <!-- Breadcrumb & Header -->
+    <div class="space-y-3">
+      <nav class="flex items-center gap-2 text-xs text-slate-500 font-medium">
+        <a href={base} class="hover:text-[#0F2942] transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-[#0F2942] font-semibold">Attendees</span>
+      </nav>
+
+      <div class="border-b border-[#EFEBC8] pb-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#0F2942] bg-[#E5C158]/40 px-2.5 py-0.5 rounded">
+          Conference Participation
+        </span>
+        <h1 class="text-3xl sm:text-4xl font-serif font-bold text-[#0F2942] mt-2">
+          Attendees
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-600 mt-2 max-w-3xl leading-relaxed">
+          Information and guidance for delegates, authors, and participants attending PReMI 2027 in Bhubaneswar, Odisha, India.
+        </p>
+      </div>
+    </div>
+
+    <!-- Status Notice -->
+    <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-6 sm:p-8 shadow-xs space-y-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-[#E5C158]/30 text-[#0F2942] flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-lg font-serif font-bold text-[#0F2942]">
+            Attendee Details Coming Soon
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-0.5">
+            Information regarding registration schedules, travel assistance, accommodation, and campus logistics will be published here as announced by the secretariat.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Sub-Page Card: VISA -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-6 shadow-xs flex flex-col justify-between space-y-4 hover:border-[#0F2942] hover:bg-[#FAF6E4] transition-all">
+        <div class="space-y-2">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-[#0C4A60] bg-[#E5C158]/30 px-2 py-0.5 rounded">
+            International Delegates
+          </span>
+          <h3 class="text-xl font-serif font-bold text-[#0F2942]">
+            VISA Information
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Essential Ministry of Home Affairs (MHA) guidelines and eligibility criteria for international participants applying for an Indian Conference Visa.
+          </p>
+        </div>
+        <div>
+          <a 
+            href={`${base}attendees/visa`} 
+            class="inline-flex items-center gap-2 px-4 py-2 bg-[#0F2942] hover:bg-[#0C4A60] text-white text-xs font-bold uppercase tracking-wider rounded transition-colors shadow-xs"
+          >
+            <span>View VISA Guidelines</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Info Card -->
+      <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-6 shadow-xs flex flex-col justify-between space-y-4">
+        <div class="space-y-2">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 bg-slate-200/50 px-2 py-0.5 rounded">
+            Assistance & Queries
+          </span>
+          <h3 class="text-xl font-serif font-bold text-[#0F2942]">
+            Secretariat Contact
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            For specific attendee questions, invitation letter inquiries, or participation details, contact the organizing secretariat directly.
+          </p>
+        </div>
+        <div>
+          <a 
+            href="mailto:premi2027@iiit-bh.ac.in" 
+            class="inline-flex items-center gap-2 text-xs font-semibold text-[#0C4A60] hover:underline"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span>premi2027@iiit-bh.ac.in</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</BaseLayout>

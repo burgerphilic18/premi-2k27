@@ -1,0 +1,64 @@
+---
+const base = import.meta.env.BASE_URL;
+
+const organisers = [
+  {
+    name: "Indian Unit for Pattern Recognition and Artificial Intelligence",
+    shortName: "IUPRAI",
+    logo: `${base}joint-organizers/iuprai-logo.png`,
+    alt: "Indian Unit for Pattern Recognition and Artificial Intelligence (IUPRAI) Logo",
+    description: "Affiliate of International Association for Pattern Recognition",
+  },
+  {
+    name: "International Association for Pattern Recognition",
+    shortName: "IAPR",
+    logo: `${base}joint-organizers/iapr-logo.png`,
+    alt: "International Association for Pattern Recognition (IAPR) Logo",
+    description: "50 Years of Promoting Pattern Recognition (1978–2028)",
+  },
+  {
+    name: "International Institute of Information Technology Bhubaneswar",
+    shortName: "IIIT Bhubaneswar",
+    logo: `${base}joint-organizers/iiit-bhubaneswar-logo.png`,
+    alt: "International Institute of Information Technology Bhubaneswar (IIIT Bhubaneswar) Logo",
+    description: "Host & Organizing Institution, Odisha, India",
+  },
+];
+---
+
+<section id="joint-organizers" class="space-y-6 pt-4">
+  <div class="border-b border-[#EFEBC8] pb-3">
+    <span class="text-xs font-bold uppercase tracking-wider text-[#0F2942] bg-[#E5C158]/40 px-2 py-0.5 rounded">
+      Institutional Collaboration
+    </span>
+    <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#0F2942] mt-2">
+      Jointly Organized By
+    </h2>
+    <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+      PReMI 2027 is jointly organized by the leading pattern recognition and machine intelligence bodies in collaboration with the host institution.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+    {organisers.map((org) => (
+      <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-6 sm:p-7 shadow-xs flex flex-col justify-between items-center text-center transition-all hover:border-[#0F2942] hover:bg-[#FAF6E4]">
+        <div class="w-full flex items-center justify-center h-28 p-2 mb-4 bg-white rounded border border-[#EFEBC8]/40">
+          <img 
+            src={org.logo} 
+            alt={org.alt} 
+            class="max-h-24 max-w-full w-auto object-contain"
+            loading="lazy"
+          />
+        </div>
+        <div class="space-y-1.5 flex-grow flex flex-col justify-center">
+          <h3 class="text-base sm:text-lg font-serif font-bold text-[#0F2942] leading-snug">
+            {org.name}
+          </h3>
+          <p class="text-xs text-slate-600 font-medium">
+            {org.description}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

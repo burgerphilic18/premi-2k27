@@ -1,6 +1,6 @@
 # 12th International Conference on Pattern Recognition and Machine Intelligence (PReMI 2027)
 
-> Official website and static web application for **PReMI 2027**, organized by the **International Institute of Information Technology (IIIT) Bhubaneswar, Odisha, India** (December 15–18, 2027).
+> Official website and static web application for **PReMI 2027**, organized by the **International Institute of Information Technology (IIIT) Bhubaneswar, Odisha, India** (December 14–17, 2027).
 
 ---
 
@@ -122,8 +122,8 @@ The site is optimized for global academic visibility and search indexation:
 | **Paper Submission Close** | June 30, 2027 |
 | **Acceptance Notification** | September 05, 2027 |
 | **Camera-Ready Submission** | September 20, 2027 |
-| **Pre-Conference Tutorials** | December 15, 2027 |
-| **Conference Dates** | December 15–18, 2027 |
+| **Pre-Conference Tutorials** | December 14, 2027 |
+| **Conference Dates** | December 14–17, 2027 |
 
 ---
 

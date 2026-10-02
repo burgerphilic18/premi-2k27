@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+
+const reviewBoardMembers = [
+  { name: "Amita Jain", affiliation: "Netaji Subhas University of Technology, India" },
+  { name: "Anindya Halder", affiliation: "North-Eastern Hill University, India" },
+  { name: "Asif Ekbal", affiliation: "IIT Patna, India" },
+  { name: "Asit Kumar Das", affiliation: "IIEST Shibpur, India" },
+  { name: "Baijnath Kaushik", affiliation: "Shri Mata Vaishno Devi University, India" },
+  { name: "Damodar Reddy Edla", affiliation: "NIT Goa, India" },
+  { name: "Debadatta Swain", affiliation: "IIT Bhubaneswar, India" },
+  { name: "Debasrita Chakraborty", affiliation: "DigsFact, USA" },
+  { name: "Devendra K. Tayal", affiliation: "IGDTUW Delhi, India" },
+  { name: "Imon Mukherjee", affiliation: "IIIT Kalyani, India" },
+  { name: "M. Tanveer", affiliation: "IIT Indore, India" },
+  { name: "Manish Shrivastava", affiliation: "IIIT Hyderabad, India" },
+  { name: "Namita Jain", affiliation: "Jadavpur University, India" },
+  { name: "Niladri Bihari Puhan", affiliation: "IIT Bhubaneswar, India" },
+  { name: "Nilkanta Sahu", affiliation: "IIIT Guwahati, India" },
+  { name: "Mrinal Das", affiliation: "IIT Palakkad, India" },
+  { name: "Pabitra Mitra", affiliation: "IIT Kharagpur, India" },
+  { name: "Pankaj K Sa", affiliation: "NIT Rourkela, India" },
+  { name: "Pradyut Kumar Biswal", affiliation: "IIIT Bhubaneswar, India" },
+  { name: "Puspanjali Mohapatra", affiliation: "IIIT Bhubaneswar, India" },
+  { name: "Rahul Roy", affiliation: "Mahindra University, India" },
+  { name: "Rakesh Chandra Balabantaray", affiliation: "IIIT Bhubaneswar, India" },
+  { name: "Reshma Rastogi (nee Khemchandani)", affiliation: "South Asian University, India" },
+  { name: "Romi Banerjee", affiliation: "IIT Jodhpur, India" },
+  { name: "Rosy Sarmah", affiliation: "Tezpur University, India" },
+  { name: "Shanmuganathan Raman", affiliation: "IIT Gandhinagar, India" },
+  { name: "Soumen Bag", affiliation: "IIT (ISM) Dhanbad, India" },
+  { name: "Suman Kundu", affiliation: "IIT Madras, India" },
+  { name: "Swalpa Kumar Roy", affiliation: "Tezpur University, India" },
+  { name: "Swarup Roy", affiliation: "Tezpur University, India" },
+  { name: "T. Veerakumar", affiliation: "NIT Goa, India" },
+  { name: "Tripti Swarnkar", affiliation: "NIT Raipur, India" },
+  { name: "Umesh Chandra Pati", affiliation: "NIT Rourkela, India" }
+];
+---
+
+<BaseLayout 
+  title="Review Board | PReMI 2027" 
+  description="Official Review Board members of the 12th International Conference on Pattern Recognition and Machine Intelligence (PReMI 2027)."
+>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow w-full space-y-10">
+    
+    <!-- Breadcrumb & Header -->
+    <div class="space-y-3">
+      <nav class="flex items-center gap-2 text-xs text-slate-500 font-medium">
+        <a href={base} class="hover:text-[#0F2942] transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-[#0F2942] font-semibold">Review Board</span>
+      </nav>
+
+      <div class="border-b border-[#EFEBC8] pb-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#0F2942] bg-[#E5C158]/40 px-2.5 py-0.5 rounded">
+          Peer Review Leadership
+        </span>
+        <h1 class="text-3xl sm:text-4xl font-serif font-bold text-[#0F2942] mt-2">
+          Review Board
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-600 mt-2 max-w-3xl leading-relaxed">
+          The official Review Board for PReMI 2027 comprises leading international researchers and academicians dedicated to ensuring rigorous peer review and academic excellence.
+        </p>
+      </div>
+    </div>
+
+    <!-- Review Board Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {reviewBoardMembers.map((member, index) => (
+        <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-4 sm:p-5 shadow-xs flex items-start gap-3.5 hover:border-[#0F2942] hover:bg-[#FAF6E4] transition-all">
+          <div class="w-8 h-8 rounded-full bg-[#0F2942] text-[#E5C158] font-mono text-xs font-bold flex items-center justify-center shrink-0">
+            {index + 1}
+          </div>
+          <div class="space-y-1 min-w-0 flex-grow">
+            <h2 class="text-sm sm:text-base font-serif font-bold text-[#0F2942] leading-snug">
+              {member.name}
+            </h2>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              {member.affiliation}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Note on Review Board -->
+    <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-5 text-xs text-slate-600 flex items-center justify-between flex-wrap gap-3">
+      <span>Total Review Board Members: <strong class="text-[#0F2942] font-bold">33</strong></span>
+      <a href="mailto:premi2027@iiit-bh.ac.in" class="text-[#0C4A60] hover:underline font-semibold">
+        Questions? Contact premi2027@iiit-bh.ac.in
+      </a>
+    </div>
+
+  </main>
+</BaseLayout>

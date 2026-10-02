@@ -19,3 +19,8 @@ pnpm-debug.log*
 # OS Files
 .DS_Store
 Thumbs.db
+
+# Script and data files
+*.py
+*.jsonl
+*.csv

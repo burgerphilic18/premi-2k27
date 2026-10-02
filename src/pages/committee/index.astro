@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+
+const technicalProgramCommittee = [
+  { name: "Ajith Abraham", affiliation: "Sai University, India" },
+  { name: "Akira Hirose", affiliation: "The University of Tokyo, Japan" },
+  { name: "Alejandro C. Frery", affiliation: "Victoria University of Wellington, New Zealand" },
+  { name: "Balasubramanian Raman", affiliation: "IIT Roorkee, India" },
+  { name: "Banshidhar Majhi", affiliation: "CGU Bhubaneswar, India" },
+  { name: "C. V. Jawahar", affiliation: "IIIT Hyderabad, India" },
+  { name: "Debi Prosad Dogra", affiliation: "IIT Bhubaneswar, India" },
+  { name: "Debnath Pal", affiliation: "IISc Bangalore, India" },
+  { name: "Dominik Ślęzak", affiliation: "University of Warsaw, Poland" },
+  { name: "Kevin Wong", affiliation: "Murdoch University, Australia" },
+  { name: "Kitsuchart Pasupa", affiliation: "King Mongkut's Institute of Technology Ladkrabang, Thailand" },
+  { name: "Lipo Wang", affiliation: "NTU, Singapore" },
+  { name: "Lorenzo Bruzzone", affiliation: "University of Trento, Italy" },
+  { name: "Nirmalya Roy", affiliation: "University of Maryland Baltimore County, USA" },
+  { name: "Phaneendra Yalavarthy", affiliation: "IISc Bangalore, India" },
+  { name: "Pradipta Kumar Nanda", affiliation: "S'o'A University, India" },
+  { name: "S. Indu", affiliation: "Delhi Technological University, India" },
+  { name: "Saroj Biswas", affiliation: "NIT Silchar, India" },
+  { name: "Satchidananda Dehuri", affiliation: "FM University Balasore, India" },
+  { name: "Shalabh Bhatnagar", affiliation: "IISc Bangalore, India" },
+  { name: "Shantipriya Parida", affiliation: "AMD Silo AI, Finland" },
+  { name: "Sibarama Panigrahi", affiliation: "NIT Rourkela, India" },
+  { name: "Sonali Agarwal", affiliation: "IIIT Allahabad, India" },
+  { name: "Sudipta Mukhopadhyay", affiliation: "IIT Kharagpur, India" },
+  { name: "Tingwen Huang", affiliation: "Shenzhen University of Advanced Technology, China" },
+  { name: "Tomoharu Nakashima", affiliation: "Osaka Metropolitan University, Japan" }
+];
+
+const leadershipChairs = [
+  { role: "Honorary Chair", name: "Sankar K. Pal", affiliation: "IIIT Bhubaneswar, India" },
+  { role: "General Chair", name: "Ashish Ghosh", affiliation: "IIIT Bhubaneswar, India" }
+];
+
+const advisoryCommittee = [
+  { name: "Andrej Skowron", affiliation: "University of Warsaw, Poland" },
+  { name: "Bayya Yegnanarayana", affiliation: "IIIT Hyderabad, India" },
+  { name: "Damodar Acharya", affiliation: "SoA University Bhubaneswar, India" },
+  { name: "Jayaram K. Udupa", affiliation: "University of Pennsylvania, USA" },
+  { name: "Ramalingam Chellappa", affiliation: "Johns Hopkins University, USA" },
+  { name: "Santanu Chaudhury", affiliation: "Ashoka University, India" },
+  { name: "Witold Pedrycz", affiliation: "University of Alberta, Canada" }
+];
+---
+
+<BaseLayout 
+  title="Committees | PReMI 2027" 
+  description="Official Committees of the 12th International Conference on Pattern Recognition and Machine Intelligence (PReMI 2027)."
+>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow w-full space-y-12">
+    
+    <!-- Breadcrumb & Header -->
+    <div class="space-y-3">
+      <nav class="flex items-center gap-2 text-xs text-slate-500 font-medium">
+        <a href={base} class="hover:text-[#0F2942] transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-[#0F2942] font-semibold">Committees</span>
+      </nav>
+
+      <div class="border-b border-[#EFEBC8] pb-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-[#0F2942] bg-[#E5C158]/40 px-2.5 py-0.5 rounded">
+          Conference Leadership & Governance
+        </span>
+        <h1 class="text-3xl sm:text-4xl font-serif font-bold text-[#0F2942] mt-2">
+          Organizing & Program Committees
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-600 mt-2 max-w-3xl leading-relaxed">
+          Official committees governing the 12th International Conference on Pattern Recognition and Machine Intelligence (PReMI 2027), hosted at IIIT Bhubaneswar.
+        </p>
+      </div>
+    </div>
+
+    <!-- Honorary & General Chairs -->
+    <section class="space-y-4">
+      <h2 class="text-lg font-serif font-bold text-[#0F2942] flex items-center gap-2 border-b border-[#EFEBC8] pb-2">
+        <span class="w-1.5 h-4 bg-[#E5C158] rounded-xs"></span>
+        <span>Honorary & General Chairs</span>
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {leadershipChairs.map((chair) => (
+          <div class="bg-[#FFFDF5] border border-[#EFEBC8] border-l-4 border-l-[#0F2942] rounded-md p-5 shadow-xs">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-[#0C4A60] bg-[#E5C158]/30 px-2 py-0.5 rounded">
+              {chair.role}
+            </span>
+            <h3 class="text-base sm:text-lg font-serif font-bold text-[#0F2942] mt-2">
+              {chair.name}
+            </h3>
+            <p class="text-xs text-slate-600 mt-0.5">
+              {chair.affiliation}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Advisory Committee Section -->
+    <section class="space-y-4">
+      <div class="flex items-center justify-between border-b border-[#EFEBC8] pb-2">
+        <h2 class="text-lg font-serif font-bold text-[#0F2942] flex items-center gap-2">
+          <span class="w-1.5 h-4 bg-[#E5C158] rounded-xs"></span>
+          <span>Advisory Committee</span>
+        </h2>
+        <span class="text-xs text-slate-500 font-mono">
+          {advisoryCommittee.length} Members
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {advisoryCommittee.map((adv, index) => (
+          <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-4 sm:p-5 shadow-xs flex items-start gap-3.5 hover:border-[#0F2942] hover:bg-[#FAF6E4] transition-all">
+            <div class="w-8 h-8 rounded-full bg-[#E5C158] text-[#0F2942] font-mono text-xs font-bold flex items-center justify-center shrink-0">
+              {index + 1}
+            </div>
+            <div class="space-y-1 min-w-0 flex-grow">
+              <h3 class="text-sm sm:text-base font-serif font-bold text-[#0F2942] leading-snug">
+                {adv.name}
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                {adv.affiliation}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Technical Program Committee Section -->
+    <section class="space-y-4">
+      <div class="flex items-center justify-between border-b border-[#EFEBC8] pb-2">
+        <h2 class="text-lg font-serif font-bold text-[#0F2942] flex items-center gap-2">
+          <span class="w-1.5 h-4 bg-[#0F2942] rounded-xs"></span>
+          <span>Technical Program Committee</span>
+        </h2>
+        <a href={`${base}committee/program`} class="text-xs text-[#0C4A60] font-semibold hover:underline">
+          View Dedicated Program Committee Page &rarr;
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {technicalProgramCommittee.map((member, index) => (
+          <div class="bg-[#FFFDF5] border border-[#EFEBC8] rounded-md p-4 sm:p-5 shadow-xs flex items-start gap-3.5 hover:border-[#0F2942] hover:bg-[#FAF6E4] transition-all">
+            <div class="w-8 h-8 rounded-full bg-[#0F2942] text-[#E5C158] font-mono text-xs font-bold flex items-center justify-center shrink-0">
+              {index + 1}
+            </div>
+            <div class="space-y-1 min-w-0 flex-grow">
+              <h3 class="text-sm sm:text-base font-serif font-bold text-[#0F2942] leading-snug">
+                {member.name}
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                {member.affiliation}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>
